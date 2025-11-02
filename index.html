@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope On Wheel - Emergency Ambulance Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Hope On Wheel</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="#" class="btn-login">Login</a>
+                <a href="#" class="btn-login">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <h1>Emergency Ambulance Service At Your Doorstep</h1>
+            <p>24/7 Professional Medical Transportation - Fast, Safe & Reliable</p>
+            <button class="emergency-btn" onclick="openBookingModal()">🚨 BOOK AMBULANCE NOW</button>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">50000</div>
+                <div class="stat-label">Lives Saved</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Avg Response Time (Min)</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98</div>
+                <div class="stat-label">Success Rate (%)</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24</div>
+                <div class="stat-label">Hours Available</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section" id="booking">
+        <div class="booking-container">
+            <h2>Quick Emergency Booking</h2>
+            <form class="booking-form" id="bookingForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientName">Patient Name *</label>
+                        <input type="text" id="patientName" name="patientName" placeholder="Enter patient name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientPhone">Phone Number *</label>
+                        <input type="tel" id="patientPhone" name="patientPhone" placeholder="Enter phone number" pattern="[0-9]{10}" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pickupAddress">Pickup Address *</label>
+                        <input type="text" id="pickupAddress" name="pickupAddress" placeholder="Enter exact location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hospital">Destination Hospital *</label>
+                        <select id="hospital" name="hospital" required>
+                            <option value="">Select Hospital</option>
+                            <option value="National_Hospital">National Hospital, Colombo</option>
+                            <option value="Colombo_Hospital">Colombo Hospital</option>
+                            <option value="Peradeniya_Hospital">University of Peradeniya Teaching Hospital</option>
+                            <option value="Kandy_Hospital">Kandy Hospital</option>
+                            <option value="Galle_Hospital">Galle Hospital</option>
+                            <option value="Other">Other Hospital</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="emergencyType">Emergency Type *</label>
+                        <select id="emergencyType" name="emergencyType" required>
+                            <option value="">Select Type</option>
+                            <option value="Accident">Accident/Trauma</option>
+                            <option value="Medical">Medical Emergency</option>
+                            <option value="Cardiac">Cardiac Emergency</option>
+                            <option value="Stroke">Stroke</option>
+                            <option value="Childbirth">Childbirth</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientAge">Patient Age</label>
+                        <input type="number" id="patientAge" name="patientAge" min="0" max="120" placeholder="Age">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Additional Medical Details</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Any allergies, medications, or special conditions..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Request Ambulance Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="services-container">
+            <h2>Our Premium Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚑</div>
+                    <h3>Emergency Response</h3>
+                    <p>Swift response to medical emergencies with trained paramedics available 24/7 365 days a year</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👨‍⚕</div>
+                    <h3>Trained Paramedics</h3>
+                    <p>Our team consists of certified paramedics and medical professionals with extensive training</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚕</div>
+                    <h3>Advanced Equipment</h3>
+                    <p>Equipped with latest medical devices and state-of-the-art life-support systems</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Real-time Tracking</h3>
+                    <p>Track your ambulance location in real-time through our mobile app and web platform</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💰</div>
+                    <h3>Transparent Pricing</h3>
+                    <p>No hidden charges - get instant quotes before confirmation with flexible payment options</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔒</div>
+                    <h3>Patient Privacy</h3>
+                    <p>Complete confidentiality guaranteed - HIPAA compliant with encrypted medical records</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us-section">
+        <div class="why-us-container">
+            <h2>Why Choose Hope On Wheel?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <div>
+                        <h3>Lightning Fast</h3>
+                        <p>Average response time under 5 minutes in urban areas with rapid deployment</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📍</div>
+                    <div>
+                        <h3>GPS Enabled</h3>
+                        <p>Advanced GPS technology for accurate location tracking and optimal route planning</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✅</div>
+                    <div>
+                        <h3>Verified Drivers</h3>
+                        <p>All drivers are thoroughly background checked and professionally trained certified staff</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💬</div>
+                    <div>
+                        <h3>24/7 Support</h3>
+                        <p>Customer support available round the clock via phone, email and live chat</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🚑</div>
+                    <div>
+                        <h3>Modern Fleet</h3>
+                        <p>Well-maintained ambulances with cutting-edge medical equipment and technology</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📞</div>
+                    <div>
+                        <h3>Easy Booking</h3>
+                        <p>Simple one-click booking through web portal or mobile app in multiple languages</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Hope On Wheel saved my father's life! The ambulance arrived in just 4 minutes and the paramedics were incredibly professional and caring."</p>
+                    <p class="testimonial-author">- Mr. Silva, Colombo</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Excellent service! I was in a serious accident and Hope On Wheel responded immediately. Thank you for being there when I needed you most."</p>
+                    <p class="testimonial-author">- Ms. Jayasinghe, Kandy</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Very reliable and professional team. The real-time tracking feature is amazing. Highly recommended for emergency medical transport."</p>
+                    <p class="testimonial-author">- Dr. Perera, Galle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Hope On Wheel</h4>
+                    <p>24/7 Emergency Medical Services</p>
+                    <p>📞 Emergency: 1990</p>
+                    <p>📧 support@hopeonwheel.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#booking">Book Now</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Areas</h4>
+                    <ul>
+                        <li>Colombo</li>
+                        <li>Kandy</li>
+                        <li>Galle</li>
+                        <li>All Sri Lanka</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hope On Wheel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" style="display: none;"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Ambulance - Hope on Wheel</title>
+</head>
+<body>
+    <h2>Book an Ambulance</h2>
+    <form th:action="@{/book}" method="post">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="text" name="contact" placeholder="Contact Number" required>
+        <input type="text" name="pickup" placeholder="Pickup Location" required>
+        <input type="text" name="destination" placeholder="Destination Hospital" required>
+        <select name="type" required>
+            <option value="">Select Ambulance Type</option>
+            <option>Basic Life Support</option>
+            <option>Advanced Life Support</option>
+            <option>ICU Ambulance</option>
+        </select>
+        <textarea name="notes" placeholder="Additional Notes"></textarea>
+        <button type="submit">Confirm Booking</button>
+    </form>
+</body>
+</html>
