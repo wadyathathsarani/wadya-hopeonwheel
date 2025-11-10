@@ -1,23 +1,43 @@
-function toggleEdit(section) {
-const personalFields = ['fullName', 'email', 'phone', 'dob', 'address', 'city'];
-const medicalFields = ['bloodType'];
-let fields = section === 'personal' ? personalFields : medicalFields;
+function enableEdit(section) {
+  const inputs = document.querySelectorAll(`#${section}Card input`);
+  inputs.forEach(i => i.disabled = false);
 
-const isDisabled = document.getElementById(fields[0]).disabled;
-
-fields.forEach(id => {
-document.getElementById(id).disabled = !isDisabled;
-});
-
-if (!isDisabled) {
-showSuccessMessage();
-}
+  const btnGroup = document.getElementById(`${section}Buttons`);
+  btnGroup.innerHTML = `
+    <button class="save-btn" onclick="saveChanges('${section}')">Save</button>
+    <button class="cancel-btn" onclick="cancelEdit('${section}')">Cancel</button>
+  `;
 }
 
-function showSuccessMessage() {
-const msg = document.getElementById('successMessage');
-msg.classList.add('show');
-setTimeout(() => {
-msg.classList.remove('show');
-}, 3000);
+function saveChanges(section) {
+  const inputs = document.querySelectorAll(`#${section}Card input`);
+  inputs.forEach(i => i.disabled = true);
+
+  if (section === 'personal') {
+    document.getElementById('profileName').textContent =
+      document.getElementById('fullName').value;
+    document.getElementById('profileEmail').textContent =
+      document.getElementById('email').value;
+  }
+
+  showSuccess();
+  resetButtons(section);
 }
+
+function cancelEdit(section) {
+  const inputs = document.querySelectorAll(`#${section}Card input`);
+  inputs.forEach(i => i.disabled = true);
+  resetButtons(section);
+}
+
+function resetButtons(section) {
+  const btnGroup = document.getElementById(`${section}Buttons`);
+  btnGroup.innerHTML = `<button class="edit-btn" onclick="enableEdit('${section}')">Edit</button>`;
+}
+
+function showSuccess() {
+  const msg = document.getElementById('successMessage');
+  msg.classList.add('show');
+  setTimeout(() => msg.classList.remove('show'), 3000);
+}
+
