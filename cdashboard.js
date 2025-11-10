@@ -25,18 +25,16 @@ document.getElementById("emergencyBtn").onclick = () => {
   }
 };
 
-// Profile Button
+// Profile
 document.getElementById("profileBtn").onclick = () => {
   window.location.href = "profilesetting.html";
 };
 
-// Logout Button
+// Logout → go to index.html
 document.getElementById("logoutBtn").onclick = () => {
   if (confirm("Are you sure you want to logout?")) {
-    window.location.href = "customer-login.html";
+    window.location.href = "index.html";
   }
 };
 
 window.onload = () => console.log("Dashboard loaded successfully!");
-
-
