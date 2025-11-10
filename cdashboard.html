@@ -1,57 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Customer Dashboard - Hope On Wheel</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Dashboard - Hope On Wheel</title>
 
-    <!-- Link to CSS -->
-    <link rel="stylesheet" href="style.css" />
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Header -->
-<div class="header">
+  <!-- Header -->
+  <div class="header">
     <div class="header-left">
-        <div class="logo">🚑</div>
-        <div class="welcome-text">
-            <h2>Welcome, John Doe!</h2>
-            <p>Hope On Wheel - Your Emergency Partner</p>
-        </div>
+      <div class="logo">🚑</div>
+      <div class="welcome-text">
+        <h2>Welcome, John Doe!</h2>
+        <p>Hope On Wheel - Your Emergency Partner</p>
+      </div>
     </div>
     <div class="header-right">
-        <button class="profile-btn" id="profileBtn">👤 Profile</button>
-        <button class="logout-btn" id="logoutBtn">🚪 Logout</button>
+      <button class="profile-btn" id="profileBtn">👤 Profile</button>
+      <button class="logout-btn" id="logoutBtn">🚪 Logout</button>
     </div>
-</div>
+  </div>
 
-<!-- Emergency Banner -->
-<div class="emergency-banner">
+  <!-- Emergency Banner -->
+  <div class="emergency-banner">
     <div class="icon">🚨</div>
     <h3>Medical Emergency?</h3>
     <p>Get instant ambulance service at your location</p>
     <button class="emergency-call-btn" id="emergencyBtn">📞 Call 911 Now</button>
-</div>
+  </div>
 
-<!-- Stats Grid -->
-<div class="stats-grid">
+  <!-- Stats Grid -->
+  <div class="stats-grid">
     <div class="stat-box"><div class="stat-number">12</div><div class="stat-label">Total Bookings</div></div>
     <div class="stat-box"><div class="stat-number">2</div><div class="stat-label">Active Trips</div></div>
     <div class="stat-box"><div class="stat-number">4.8★</div><div class="stat-label">Your Rating</div></div>
-</div>
+  </div>
 
-<!-- Quick Actions -->
-<div class="quick-actions">
+  <!-- Quick Actions -->
+  <div class="quick-actions">
     <div class="action-card" id="bookBtn">
-        <div class="icon">🚑</div>
-        <h3>Book Ambulance</h3>
-        <p>Request emergency ambulance service now</p>
+      <div class="icon">🚑</div>
+      <h3>Book Ambulance</h3>
+      <p>Request emergency ambulance service now</p>
     </div>
 
     <div class="action-card" id="trackBtn"><div class="icon">📍</div><h3>Track Live</h3><p>Track your ambulance in real-time</p></div>
     <div class="action-card" id="historyBtn"><div class="icon">📋</div><h3>Booking History</h3><p>View all your past bookings</p></div>
     <div class="action-card" id="recordsBtn"><div class="icon">🏥</div><h3>Medical Records</h3><p>Access your medical information</p></div>
-</div>
+  </div>
 
-<!-- Status Section -->
-<div class="status-section">
-</div>
+  <!-- Status Section -->
+  <div class="status-section">
+    <div class="status-card">
+      <div class="status-header"><h3>Recent Bookings</h3><span class="status-icon">📅</span></div>
+      <div class="booking-item"><div class="booking-date">Nov 5, 2025 - 3:45 PM</div><div class="booking-status">✅ Completed - Basic Ambulance</div></div>
+      <div class="booking-item"><div class="booking-date">Oct 28, 2025 - 11:20 AM</div><div class="booking-status">✅ Completed - ICU Ambulance</div></div>
+      <div class="booking-item"><div class="booking-date">Oct 15, 2025 - 8:30 PM</div><div class="booking-status">✅ Completed - Advanced Life Support</div></div>
+    </div>
+
+    <div class="status-card">
+      <div class="status-header"><h3>Emergency Contacts</h3><span class="status-icon">📞</span></div>
+      <div class="booking-item"><div class="booking-date">Primary Contact</div><div class="booking-status">Jane Doe - +94 123-4567</div></div>
+      <div class="booking-item"><div class="booking-date">Secondary Contact</div><div class="booking-status">Dr. Smith - +94 987-6543</div></div>
+      <div class="booking-item"><div class="booking-date">Insurance Provider</div><div class="booking-status">HealthCare Plus - Policy #HC12345</div></div>
+    </div>
+  </div>
+
+  <!-- Link external JS -->
+  <script src="script.js"></script>
+</body>
+</html>
