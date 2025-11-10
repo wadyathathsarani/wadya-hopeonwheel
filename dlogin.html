@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Portal - Login</title>
+    <link rel="stylesheet" href="driverlogin.css">
+</head>
+<body>
+<!-- Back Button -->
+<button class="back-button">← Back</button>
+
+<div class="login-container">
+    <div class="logo">
+        <div class="car-icon">🚗</div>
+    </div>
+    <h1>Driver Portal</h1>
+    <p class="subtitle">Sign in to your driver account</p>
+    <div class="verified-badge">
+        <span class="checkmark">✓</span>
+        <span>Verified Driver Access</span>
+    </div>
+
+    <!-- Login Form -->
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <div class="input-wrapper">
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <span class="input-icon email-icon">📧</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-wrapper">
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <span class="input-icon password-icon">🔒</span>
+            </div>
+        </div>
+
+        <div class="form-footer">
+            <label class="remember-me">
+                <input type="checkbox" id="remember">
+                <span>Remember me</span>
+            </label>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="login-button">Login to Dashboard</button>
+    </form>
+</div>
+
+<script src="driverlogin.js"></script>
+</body>
+</html>
